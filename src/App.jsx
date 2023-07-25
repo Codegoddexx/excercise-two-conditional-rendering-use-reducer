@@ -3,10 +3,10 @@ import './App.css'
 import formReducer from './reducer/formReducer'
 
 const defaultState = {
-  firstName: "Prepre",
-  lastName: "Mama",
-  Mail: "prepre@gmail.com",
-  password: "1234"
+  firstName: "",
+  lastName: "",
+  Mail: "",
+  password: ""
 }
 
 function App() {
