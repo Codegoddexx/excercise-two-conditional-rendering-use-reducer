@@ -45,10 +45,11 @@ function App() {
             <button
               type="button"
               className="next"
-              onClick={() => setCurrentPage(2)}
+              onClick={() => setCurrentPage((prev)=>prev + 1)}
             >
               NEXT
             </button>
+            
           </div>
 
           <div className="secondPage" style={{ display: currentPage === 2 ? "block" : "none" }}>
@@ -67,10 +68,18 @@ function App() {
                 value={state.password}
               />
             </div>
+            
+            <button
+              type="button"
+              className="previous"
+              onClick={() => setCurrentPage((prev)=>prev - 1)}
+            >
+              Previous
+            </button>
             <button
               type="button"
               className="next2"
-              onClick={() => setCurrentPage(3)}
+              onClick={() => setCurrentPage((prev)=> prev + 1)}
             >
               NEXT
             </button>
@@ -81,6 +90,13 @@ function App() {
             <p className="surname">{state.lastName}</p>
             <p className="email">{state.Mail}</p>
             <p className="password">{state.password}</p>
+            <button
+              type="button"
+              className="previous"
+              onClick={() => setCurrentPage((prev)=>prev - 1)}
+            >
+              Previous
+            </button>
           </div>
         </form>
       </div>
