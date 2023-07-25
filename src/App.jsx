@@ -34,10 +34,14 @@ function App() {
       <div className="app">
         <form>
           <div className="firstPage" style={{ display: currentPage === 1 ? "block" : "none" }}>
-            <label>First Name</label>
-            <input onInput={changeFirstName} value={state.firstName} />
-            <label> Last Name</label>
-            <input onInput={changeLastName} value={state.lastName} />
+            <div>
+              <label>First Name</label>
+              <input onInput={changeFirstName} value={state.firstName} />
+            </div>
+            <div>
+              <label> Last Name</label>
+              <input onInput={changeLastName} value={state.lastName} />
+            </div>
             <button
               type="button"
               className="next"
@@ -48,17 +52,21 @@ function App() {
           </div>
 
           <div className="secondPage" style={{ display: currentPage === 2 ? "block" : "none" }}>
-            <label> Email </label>
-            <input
-              type="email"
-              onInput={changeMail}
-              value={state.Mail}
-            />
-            <label> Password </label>
-            <input
-              onInput={changePassword}
-              value={state.password}
-            />
+            <div>
+              <label> Email </label>
+              <input
+                type="email"
+                onInput={changeMail}
+                value={state.Mail}
+              />
+            </div>
+            <div>
+              <label> Password </label>
+              <input
+                onInput={changePassword}
+                value={state.password}
+              />
+            </div>
             <button
               type="button"
               className="next2"
